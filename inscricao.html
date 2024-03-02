@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>HACKSEC</title>
+    <title>Inscrição de Formulário</title>
     <link rel="shortcut icon" type="imagex/png" href="imagens/logoEvento.ico">
 </head>
 
-<body>
+<body class="formulario">
 
     <header>
         <a class="logo" href="home.html" class="logo">
@@ -23,16 +23,15 @@
         </nav>
     </header>
 
-    <div>
-        <img id="fundo" src="imagens/evento.jpg" alt="evento">
-        <div class="texto">
+    <div class="txt">
+        <div class="inscricao-texto imagemfundoinscricao">
             <div>
                 <h1>INSCREVA-SE</h1>
                 <ul>
                     <li>
                         <p>Garanta seu acesso <b>PRESENCIAL</b> ao maior festival Hacker do Brasil!</p>
                     </li>
-                    
+
                     <li>
                         <p>Assista a diversas palestras, oficinas e shows!</p>
                     </li>
@@ -44,14 +43,14 @@
         </div>
     </div>
 
-    <div class="caixa">
-        <form action="submissao.html" method="get">
-            <fieldset>
-                <legend>
-                    INSIRA SEUS DADOS
-                </legend>
+    <div class="">
+        <form class="caixa" action="submissao.html" method="get">
+            <div class="boxform">
+                <h1>FAÇA SUA INSCRIÇÃO</h1>
+                <p><i>Os campos com <font color="red">*</font> são obrigatórios </i></p>
+
                 <div>
-                    <label for="nome"><i>Nome Completo</i></label>
+                    <label for="nome"><i>Nome Completo <font color="red">*</font></i></label>
                     <br>
                     <input type="text" id="dados" name="nome" autofocus required>
                 </div>
@@ -61,32 +60,39 @@
                     <input type="date" id="dados" name="nome">
                 </div>
                 <div>
-                    <label for="cpf"><i>CPF</i></label>
+                    <label for="cpf"><i>CPF</i> <font color="red">*</font></label>
                     <br>
                     <input type="text" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" id="dados" name="cpf" maxlength="14"
                         placeholder="Formato:xxx.xxx.xxx-xx" required>
                 </div>
                 <div>
-                    <label for="telefone"><i>Telefone</i></label>
+                    <label for="telefone"><i>Telefone</i> <font color="red">*</font></label>
                     <br>
-                    <input type="tel" pattern="(\d{2}\)\d{5}\-\d{4}\" id="telefone" name="fone"
+                    <input type="tel" pattern="(\d{2}\)\d{5}\-\d{4}\" id="dados" name="fone"
                         placeholder="Formato:(xx)xxxxx-xxxx" required>
                 </div>
                 <div>
-                    <label for="email"><i>Email</i></label>
+                    <label for="email"><i>Email</i> <font color="red">*</font></label>
                     <br>
                     <input type="email" id="dados" name="email" required>
                 </div>
                 <div>
                     <label for="end"><i>Endereço</i></label>
                     <br>
-                    <label for="end">Rua</label>
+                    <label for="end">Rua <font color="red">*</font></label>
+                    <br>
                     <input type="text" id="dados" name="end" required>
-                    <label for="end">Número</label>
-                    <input type="number" id="dados" name="end" required>
+                    <br> 
+                    <label for="end">Número <font color="red">*</font></label>
+                    <br>
+                    <input type="number" id="num" name="end" required>
+                    <br>
                     <label for="end">Complemento</label>
-                    <input type="text" id="dados" name="end">
-                    <label>Estado
+                    <br>
+                    <input type="text" id="comp" name="end">
+                    <br>
+                    <label>Estado <font color="red">*</font>
+                        <br>
                         <select name="end" required>
                             <option value="">Selecione</option>
                             <option value="ac">Acre</option>
@@ -123,52 +129,52 @@
                 <br>
                 <div>
                     <legend>
-                        Em qual(is) palaestra(s) você tem interesse de participar?
+                        Em qual(is) palaestra(s) você tem interesse de participar? <font color="red">*</font>
                     </legend>
                     <div>
-                        <input type="checkbox" id="dados" name="ataque" value="ataque">
+                        <input type="checkbox" id="check" name="ataque" value="ataque">
                         <label for="ataque">Ataque</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="dados" name="defesa" value="defesa">
+                        <input type="checkbox" id="check" name="defesa" value="defesa">
                         <label for="defesa">Defesa</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="dados" name="front" value="front">
+                        <input type="checkbox" id="check" name="front" value="front">
                         <label for="front">Front-End</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="dados" name="back" value="back">
+                        <input type="checkbox" id="check" name="back" value="back">
                         <label for="back">Back-End</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="dados" name="data" value="data">
+                        <input type="checkbox" id="check" name="data" value="data">
                         <label for="data">Data Science</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="dados" name="cloud" value="cloud">
+                        <input type="checkbox" id="check" name="cloud" value="cloud">
                         <label for="cloud">Cloud</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="dados" name="privacidade" value="priv">
+                        <input type="checkbox" id="check" name="privacidade" value="priv">
                         <label for="privacidade">Privacidade</label>
                     </div>
                 </div>
                 <div>
                     <div>
                         <br>
-                        <input type="radio" id="dados" name="termos" value="sim" required>
-                        <label for="dados1">Concordo com os <a href="termos.html">termos de uso e
+                        <input type="radio" id="check" name="termos" value="sim" required>
+                        <label for="check">Concordo com os <a href="termos.html">termos de uso e
                                 privacidade</a></label>
                     </div>
                     <div>
-                        <input type="radio" id="dados" name="termos" value="nao">
-                        <label for="dados2">Não concordo</a></label>
+                        <input type="radio" id="check" name="termos" value="nao">
+                        <label for="check">Não concordo</a></label>
                     </div>
                 </div>
-
-            </fieldset>
-            <button>Enviar</button>
+                <br>
+                <button>Enviar</button>
+            </div>
         </form>
     </div>
 
