@@ -1,9 +1,8 @@
 /*Corpo do código*/
 body {
     background-color: rgb(40, 40, 41);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: auto;
-
     .texto {
         margin: 20px;
         text-align: center;
@@ -103,7 +102,7 @@ footer .link:hover {
 
 footer {
     background-color: #000000;
-    height: 470px;
+    height: 450px;
     width: 100%;
     position: static;
     bottom: 0;
@@ -576,7 +575,7 @@ table {
     border-radius: 100%;
 }
 
-/*Resposividade*/
+/*Responsividade*/
 
 @media (max-width: 768px) {
     header{
@@ -598,6 +597,8 @@ table {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        height: 650px;
+
     }
     .container{
         display: flex;
@@ -637,6 +638,9 @@ table {
     }
     #gif img{
         width: 70%;
+    }
+    p{
+        font-family: 'Poppins';
     }
     
   }
